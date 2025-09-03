@@ -11,6 +11,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.post('/api/test', (req, res) => {
+  console.log('Test route hit:', req.body);
+  res.json({ message: 'Test successful', dataReceived: req.body });
+});
+
 // Routes
 const translateRoute = require('./routes/translate');
 const pageRoute = require('./routes/pagesRoutes');
@@ -24,6 +29,9 @@ app.get('/', (req, res) => {
   res.send('Server is up');
 });
 
+app.get('/api/ping', (req, res) => {
+  res.send('pong');
+});
 
 
 // MongoDB Connection
