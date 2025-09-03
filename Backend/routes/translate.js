@@ -3,6 +3,11 @@ const axios = require('axios');
 const Translation = require('../models/translation'); 
 const router = express.Router();
 
+//health check route
+router.get('/ping', (req, res) => {
+  res.send('Translation route is alive');
+});
+
 router.post('/', async (req, res) => {
   const { text, lang } = req.body;
 
