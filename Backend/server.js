@@ -11,6 +11,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.post('/api/test', (req, res) => {
+  console.log('Test route hit:', req.body);
+  res.json({ message: 'Test successful', dataReceived: req.body });
+});
+
 // Routes
 const translateRoute = require('./routes/translate');
 const pageRoute = require('./routes/pagesRoutes');
