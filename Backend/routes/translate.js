@@ -7,9 +7,9 @@ router.post('/', async (req, res) => {
   const { text, lang } = req.body;
 
   try {
-    const response = await axios.post('https://translation.ghananlp.org/translate', {
-      in: text,
-      lang: lang
+    const response = await axios.post('https://translation-api.ghananlp.org/v1/translate', {
+      in: " Translated text",
+      lang: "en-tw"
     });
 
     const translated = response.data.out;
