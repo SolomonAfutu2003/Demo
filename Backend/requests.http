@@ -1,0 +1,21 @@
+### Translate to Ewe
+POST http://localhost:5000/api/translate
+Content-Type: application/json
+
+{
+  "text": "Hello, how are you?",
+  "lang": "ee"
+}
+
+### Translate to Twi
+POST http://localhost:5000/api/translate
+Content-Type: application/json
+
+{
+  "text": "Good morning",
+  "lang": "tw"
+}
+
+### Health check
+GET http://localhost:5000/health
+
