@@ -1,5 +1,5 @@
 const express = require('express');
-const axios = require('axios');
+const axios = require('axios')
 const Translation = require('../models/translation'); 
 const router = express.Router();
 
